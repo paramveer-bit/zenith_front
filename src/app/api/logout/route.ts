@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
     const cookieStore = await cookies(); // Await the cookies() function
     const authToken = cookieStore.get("auth_token");
 

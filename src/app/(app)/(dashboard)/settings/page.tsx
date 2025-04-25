@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Copy } from "lucide-react"
 import axios from "axios"
+import LogRention from "@/components/LogRetentionSelector"
 
 export default function SettingsPage() {
   const { toast } = useToast()
@@ -144,6 +145,7 @@ export default function SettingsPage() {
             {copied && <p className="mt-2 text-sm text-green-600">Copied to clipboard</p>}
           </CardContent>
         </Card>
+        <LogRention />
       </div>
     </div>
   )

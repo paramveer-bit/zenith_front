@@ -26,7 +26,7 @@ function Navbar() {
   const logout = async () => {
     try {
       const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/signout`, {}, { withCredentials: true })
-      const res2 = await axios.get("/api/logout", { withCredentials: true })
+      await axios.get("/api/logout", { withCredentials: true })
       router.push("/")
       console.log(res)
     } catch (error) {

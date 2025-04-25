@@ -1,6 +1,6 @@
 
 import { NextResponse, NextRequest } from "next/server";
-export async function POST(req: NextRequest) {
+export async function POST() {
     console.log("Hello setting cookies")
     const response = NextResponse.json({ message: "Logged out successfully" });
     response.cookies.set("auth_token", "jhbjhbbjbjjhbjh", {
