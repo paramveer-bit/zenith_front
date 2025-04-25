@@ -19,7 +19,6 @@ export async function middleware(req: NextRequest) {
     // console.log(url.pathname.startsWith('/login'))
     // console.log(url.pathname.startsWith('/signup'))
     // console.log(url.pathname.startsWith('/'))
-    // console.log(url.pathname.startsWith('/verify'))
 
     if (cookie === undefined &&
         !(url.pathname.startsWith('/login') ||
