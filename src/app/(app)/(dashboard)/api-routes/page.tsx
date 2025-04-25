@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Check, X, Plus, MapPin, Route } from "lucide-react"
+import { Check, X, Plus, MapPin, Route, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
 import { Input } from "@/components/ui/input"
@@ -231,7 +231,7 @@ export default function DelayedRequests() {
                 />
               </div>
             </div>
-            {/* -------------------------------------------------- */}
+            {/* --------------------------Banned User------------------------ */}
             <div className="mt-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">Banned Users</label>
               {/* Banned User lIst */}
@@ -262,6 +262,19 @@ export default function DelayedRequests() {
                 </Button>
               </div>
             </div>
+            {/* --------------------------Modified user ratelimiting ------------------------ */}
+            <div className="mt-4">
+            <Button
+              variant="outline"
+              onClick={() => router.push(`rate_limiting/${request.id}`)}
+              className="flex items-center gap-2"
+              disabled={!(editingStates[request.id]?.rateLimiting ?? request.rateLimiting)}
+            >
+              <Settings className="w-4 h-4" />
+              Modified Rate Limiting for Users
+            </Button>
+
+          </div>
             {/* Cancelled and Save button */}
             {isEditing(request.id) && (
               <div className="mt-4 flex justify-end space-x-2">

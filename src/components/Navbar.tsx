@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { BarChart3, ChevronDown, Globe, LayoutDashboard, LogOut, Menu, Settings, Shield, Users } from "lucide-react"
+import { BarChart3, ChevronDown, Globe, LayoutDashboard, LogOut, Menu, Settings, Shield, Users,Search } from "lucide-react"
 import { usePathname, useRouter } from "next/navigation"
 import axios from "axios"
 import { useToast } from "@/hooks/use-toast"
@@ -49,6 +49,7 @@ function Navbar() {
     { href: "/authentication", icon: Shield, label: "Authentication" },
     { href: "/team", icon: Users, label: "Team" },
     { href: "/settings", icon: Settings, label: "Settings" },
+    { href: "/requests", icon: Search, label: "Requests" }
   ]
 
   // Desktop sidebar navigation

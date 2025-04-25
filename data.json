@@ -1,0 +1,12 @@
+[
+    {
+      "user_code" : "user50",
+      "rate" : 10,
+      "ip" : "user1_i1p"
+    },
+    {
+      "user_code" : "user51",
+      "rate" : 10,
+      "ip" : "user_n_i1p"
+    }
+  ]

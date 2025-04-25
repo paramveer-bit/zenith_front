@@ -22,10 +22,6 @@ export default function RequestsPage() {
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Request Logs</h1>
           <div className="flex items-center gap-2">
-            <div className="relative w-64">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input type="search" placeholder="Search requests..." className="w-full bg-background pl-8" />
-            </div>
             <Select defaultValue="all" onValueChange={(newValue)=>setValue(newValue)}>
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Filter by status" />
