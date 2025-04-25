@@ -41,7 +41,7 @@ export default function LoginForm() {
 
       console.log(res)
       // Handle successful login here (e.g., save token, redirect to dashboard)
-      const res2 = await axios.post('/api/login', values, { withCredentials: true })
+      await axios.post('/api/login', values, { withCredentials: true })
       router.push("/dashboard")
     } catch (error) {
       console.log(error)

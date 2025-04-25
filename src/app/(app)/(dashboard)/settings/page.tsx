@@ -93,6 +93,29 @@ export default function SettingsPage() {
   return (
     <div className="container mx-auto py-10 px-2">
       <div className="grid gap-8">
+        
+
+        <Card>
+          <CardHeader>
+            <CardTitle>API Key</CardTitle>
+            <CardDescription>Your API key for accessing our services</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center space-x-2">
+              <div className="relative flex-1">
+                <Input readOnly value={apiKey} type="text" className="pr-10 font-mono text-sm" />
+              </div>
+              <Button variant="outline" size="icon" onClick={copyApiKey} className="flex-shrink-0">
+                <Copy className="h-4 w-4" />
+                <span className="sr-only">Copy API key</span>
+              </Button>
+            </div>
+            {copied && <p className="mt-2 text-sm text-green-600">Copied to clipboard</p>}
+          </CardContent>
+        </Card>
+
+        <LogRention />
+
         <Card>
           <CardHeader>
             <CardTitle>Change Password</CardTitle>
@@ -126,26 +149,6 @@ export default function SettingsPage() {
             </form>
           </CardContent>
         </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>API Key</CardTitle>
-            <CardDescription>Your API key for accessing our services</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center space-x-2">
-              <div className="relative flex-1">
-                <Input readOnly value={apiKey} type="text" className="pr-10 font-mono text-sm" />
-              </div>
-              <Button variant="outline" size="icon" onClick={copyApiKey} className="flex-shrink-0">
-                <Copy className="h-4 w-4" />
-                <span className="sr-only">Copy API key</span>
-              </Button>
-            </div>
-            {copied && <p className="mt-2 text-sm text-green-600">Copied to clipboard</p>}
-          </CardContent>
-        </Card>
-        <LogRention />
       </div>
     </div>
   )

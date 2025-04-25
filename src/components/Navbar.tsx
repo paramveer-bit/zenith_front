@@ -54,7 +54,7 @@ function Navbar() {
   // Desktop sidebar navigation
   if (!isMobile) {
     return (
-      <nav className="grid gap-2 p-4 text-sm h-full">
+      <nav className="grid gap-2 p-4 text-sm h-[700px]">
         <div className="flex flex-col gap-2">
           {navLinks.map((link) => (
             <Link
