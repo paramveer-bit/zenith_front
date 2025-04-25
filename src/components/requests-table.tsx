@@ -21,7 +21,7 @@ interface SendMessageLog {
     requestId: string;
     requestUrl: string;
     forwardUrl: string;
-    response: string | null;
+    response: string ;
     statusCode: number;
     type: "POST" | "GET" | "PUT" | "DELETE" | string; // You can restrict or broaden this
     comment: string;
@@ -36,118 +36,118 @@ interface SendMessageLog {
 
 
 // Sample data based on the provided JSON
-const requestsData = [
-  {
-    id: "cm9rdngnz0001umd40enwtmxx",
-    requestId: "cm806h9280004umfotb6nun9a",
-    requestUrl: "/sendhere/api/send-message",
-    forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
-    response: "NIL",
-    statusCode: 500,
-    type: "POST",
-    comment: "Error in forwarding request to the server",
-    duration: 0,
-    userId: "12345678",
-    browser: null,
-    os: null,
-    ip: "::1",
-    createdAt: "2025-04-21T17:56:07.580Z",
-    updatedAt: "2025-04-21T17:56:07.580Z",
-  },
-  {
-    id: "cm9rdnyew0003umd4b5p94gnb",
-    requestId: "cm806h9280004umfotb6nun9a",
-    requestUrl: "/sendhere/api/send-message",
-    forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
-    response: "NIL",
-    statusCode: 500,
-    type: "POST",
-    comment: "Error in forwarding request to the server",
-    duration: 0,
-    userId: "12345678",
-    browser: null,
-    os: null,
-    ip: "::1",
-    createdAt: "2025-04-21T17:56:30.585Z",
-    updatedAt: "2025-04-21T17:56:30.585Z",
-  },
-  {
-    id: "cm9rdrzhh0005umd4crjt5mk4",
-    requestId: "cm806h9280004umfotb6nun9a",
-    requestUrl: "/sendhere/api/send-message",
-    forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
-    response: {
-      message: "Message send successfully",
-      success: true,
-    },
-    statusCode: 200,
-    type: "POST",
-    comment: "Request forwarded to the server. And response is saved in the database",
-    duration: 0,
-    userId: "12345678",
-    browser: null,
-    os: null,
-    ip: "::1",
-    createdAt: "2025-04-21T17:59:38.593Z",
-    updatedAt: "2025-04-21T17:59:38.593Z",
-  },
-  {
-    id: "cm9rdt9a00007umd45khkwcra",
-    requestId: "cm806h9280004umfotb6nun9a",
-    requestUrl: "/sendhere/api/send-message",
-    forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
-    response: "NIL",
-    statusCode: 500,
-    type: "POST",
-    comment: "Error in forwarding request to the server",
-    duration: 0,
-    userId: "12345678",
-    browser: null,
-    os: null,
-    ip: "::1",
-    createdAt: "2025-04-21T18:00:37.944Z",
-    updatedAt: "2025-04-21T18:00:37.944Z",
-  },
-  {
-    id: "cm9rf6fwc0001um6oh405vwum",
-    requestId: "cm806h9280004umfotb6nun9a",
-    requestUrl: "/sendhere/api/send-message",
-    forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
-    response: '{"success":false,"message":"User Not accepting the messages"}',
-    statusCode: 403,
-    type: "POST",
-    comment: "Upstream server returned an error",
-    duration: 0,
-    userId: "12345678",
-    browser: null,
-    os: null,
-    ip: "::1",
-    createdAt: "2025-04-21T18:38:52.667Z",
-    updatedAt: "2025-04-21T18:38:52.667Z",
-  },
-  {
-    id: "cm9rdz7ui0001um5wxlwrtorh",
-    requestId: "cm806h9280004umfotb6nun9a",
-    requestUrl: "/sendhere/api/send-message",
-    forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
-    response: "NIL",
-    statusCode: 500,
-    type: "POST",
-    comment: "Error in forwarding request to the server",
-    duration: 0,
-    userId: "12345678",
-    browser: null,
-    os: null,
-    ip: "::1",
-    createdAt: "2025-04-21T18:05:16.025Z",
-    updatedAt: "2025-04-21T18:05:16.025Z",
-  },
-]
+// const requestsData = [
+//   {
+//     id: "cm9rdngnz0001umd40enwtmxx",
+//     requestId: "cm806h9280004umfotb6nun9a",
+//     requestUrl: "/sendhere/api/send-message",
+//     forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
+//     response: "NIL",
+//     statusCode: 500,
+//     type: "POST",
+//     comment: "Error in forwarding request to the server",
+//     duration: 0,
+//     userId: "12345678",
+//     browser: null,
+//     os: null,
+//     ip: "::1",
+//     createdAt: "2025-04-21T17:56:07.580Z",
+//     updatedAt: "2025-04-21T17:56:07.580Z",
+//   },
+//   {
+//     id: "cm9rdnyew0003umd4b5p94gnb",
+//     requestId: "cm806h9280004umfotb6nun9a",
+//     requestUrl: "/sendhere/api/send-message",
+//     forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
+//     response: "NIL",
+//     statusCode: 500,
+//     type: "POST",
+//     comment: "Error in forwarding request to the server",
+//     duration: 0,
+//     userId: "12345678",
+//     browser: null,
+//     os: null,
+//     ip: "::1",
+//     createdAt: "2025-04-21T17:56:30.585Z",
+//     updatedAt: "2025-04-21T17:56:30.585Z",
+//   },
+//   {
+//     id: "cm9rdrzhh0005umd4crjt5mk4",
+//     requestId: "cm806h9280004umfotb6nun9a",
+//     requestUrl: "/sendhere/api/send-message",
+//     forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
+//     response: {
+//       message: "Message send successfully",
+//       success: true,
+//     },
+//     statusCode: 200,
+//     type: "POST",
+//     comment: "Request forwarded to the server. And response is saved in the database",
+//     duration: 0,
+//     userId: "12345678",
+//     browser: null,
+//     os: null,
+//     ip: "::1",
+//     createdAt: "2025-04-21T17:59:38.593Z",
+//     updatedAt: "2025-04-21T17:59:38.593Z",
+//   },
+//   {
+//     id: "cm9rdt9a00007umd45khkwcra",
+//     requestId: "cm806h9280004umfotb6nun9a",
+//     requestUrl: "/sendhere/api/send-message",
+//     forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
+//     response: "NIL",
+//     statusCode: 500,
+//     type: "POST",
+//     comment: "Error in forwarding request to the server",
+//     duration: 0,
+//     userId: "12345678",
+//     browser: null,
+//     os: null,
+//     ip: "::1",
+//     createdAt: "2025-04-21T18:00:37.944Z",
+//     updatedAt: "2025-04-21T18:00:37.944Z",
+//   },
+//   {
+//     id: "cm9rf6fwc0001um6oh405vwum",
+//     requestId: "cm806h9280004umfotb6nun9a",
+//     requestUrl: "/sendhere/api/send-message",
+//     forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
+//     response: '{"success":false,"message":"User Not accepting the messages"}',
+//     statusCode: 403,
+//     type: "POST",
+//     comment: "Upstream server returned an error",
+//     duration: 0,
+//     userId: "12345678",
+//     browser: null,
+//     os: null,
+//     ip: "::1",
+//     createdAt: "2025-04-21T18:38:52.667Z",
+//     updatedAt: "2025-04-21T18:38:52.667Z",
+//   },
+//   {
+//     id: "cm9rdz7ui0001um5wxlwrtorh",
+//     requestId: "cm806h9280004umfotb6nun9a",
+//     requestUrl: "/sendhere/api/send-message",
+//     forwardUrl: "https://silent-whispers.vercel.app/api/send-message",
+//     response: "NIL",
+//     statusCode: 500,
+//     type: "POST",
+//     comment: "Error in forwarding request to the server",
+//     duration: 0,
+//     userId: "12345678",
+//     browser: null,
+//     os: null,
+//     ip: "::1",
+//     createdAt: "2025-04-21T18:05:16.025Z",
+//     updatedAt: "2025-04-21T18:05:16.025Z",
+//   },
+// ]
 
 export function RequestsTable({ limit,value }: { limit?: number ,value:string}) {
-  const [selectedRequest, setSelectedRequest] = useState<any>(null)
+  const [selectedRequest, setSelectedRequest] = useState<SendMessageLog>()
   const [data,setData] = useState<SendMessageLog[]>([])
-  const displayData = limit ? data.slice(0, limit) : requestsData
+  const displayData = limit ? data.slice(0, limit) : data
 
   const getStatusBadgeVariant = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) return "outline"
@@ -156,7 +156,7 @@ export function RequestsTable({ limit,value }: { limit?: number ,value:string}) 
     return "secondary"
   }
 
-  const formatResponse = (response: any) => {
+  const formatResponse = (response:string) => {
     if (response === "NIL") return "No response"
     if (typeof response === "string") {
       try {

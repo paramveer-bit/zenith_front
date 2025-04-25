@@ -26,7 +26,7 @@ const recommendedFormat = `[
   ]`
 
 export default function JsonUploadPage() {
-  const [jsonData, setJsonData] = useState<any>(null)
+  const [jsonData, setJsonData] = useState<JSON|null>(null)
   const [error, setError] = useState<string | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
@@ -52,6 +52,7 @@ export default function JsonUploadPage() {
         setJsonData(json)
         setIsSuccess(true)
       } catch (err) {
+        console.error("Error parsing JSON:", err)
         setError("Invalid JSON format. Please check your file and try again.")
       }
     }

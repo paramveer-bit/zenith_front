@@ -1,5 +1,5 @@
 
-import { NextResponse, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 export async function POST() {
     console.log("Hello setting cookies")
     const response = NextResponse.json({ message: "Logged out successfully" });

@@ -2,10 +2,9 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { RequestsTable } from "@/components/requests-table"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Search, Filter } from "lucide-react"
+import {  Filter } from "lucide-react"
 import { useEffect, useState } from "react"
 
 
